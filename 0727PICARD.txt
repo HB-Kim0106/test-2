@@ -1,0 +1,18 @@
+#duplication tagging
+
+mkdir TEMP_PICARD
+
+java -jar /BiO/Install/picard-tools-2.22.3/picard.jar AddOrReplaceReadGroups
+TMP_DIR=TEMP_PICARD VALIDATION_STRINGENCY=LENIENT SO=coordinate
+I=SRR1002940.sam O=SRR1002940_sorted.bam
+RGID=SRR1002940 RGLB=HiSeq RGPL=Illumina RGPU=unit1 RGSM=SRR1002940 CREATE_INDEX=true
+
+#Remove duplicates
+java -jar /BiO/Install/picard-tools-2.22.3/picard.jar MarkDuplicates
+TMP_DIR=TEMP_PICARD VALIDATION_STRINGENCY=LENIENT
+I=SRR1002940_sorted.bam O=SRR1002940_dedup.sam M=SRR1002940.duplicate_metrics  REMOVE_DUPLICATES=true AS=true
+
+#Sorting
+java -jar /BiO/Install/picard-tools-2.22.3/picard.jar SortSam
+TMP_DIR=TEMP_PICARD VALIDATION_STRINGENCY=LENIENT SO=coordinate
+I=SRR1002940_dedup.sam O=SRR1002940_dedup.bam CREATE_INDEX=true

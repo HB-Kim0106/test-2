@@ -1,0 +1,1 @@
+BiO/Install/FastQC_0.10.1/ fastqc -t 4 --nogroup SRR1002940.r1.trim.fq

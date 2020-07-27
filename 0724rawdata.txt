@@ -1,0 +1,2 @@
+/BiO/Install/sratoolkit.2.9.6-ubuntu64/bin/ fastq-dump --gzip --split-3 SRR1002940
+

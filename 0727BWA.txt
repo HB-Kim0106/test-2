@@ -1,0 +1,2 @@
+bwa mem -t 4 -R ‘@RG\tPL:Illumina\tID:YUHL\tSM:SRR1002940\tLB:HiSeq’ /BiO/Education/WGS/REF/ hg19.fa SRR1002940.r1.trim.fq SRR1002940.r2.trim.fq > SRR1002940.sam
+
