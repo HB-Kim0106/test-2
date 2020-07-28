@@ -1,0 +1,13 @@
+# Region-based
+
+ perl /BiO/Install/annovar/annotate_variation.pl  -buildver hg19 -downdb cytoBand humandb/
+
+# Gene-based
+
+ perl /BiO/Install/annovar/annotate_variation.pl  -buildver hg19 -downdb -webfrom annovar dbnsfp30a humandb/
+
+# File-based
+
+ perl /BiO/Install/annovar/annotate_variation.pl  -buildver hg19 -downdb -webfrom annovar clinvar_20200316 humandb/
+
+ perl /BiO/Install/annovar/annotate_variation.pl  -buildver hg19 -downdb -webfrom annovar avsnp138 humandb/

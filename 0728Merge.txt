@@ -1,0 +1,10 @@
+# gatk Merge
+
+java –Xmx8g -jar /BiO/Install/gatk-4.1.7.0/gatk-package-4.1.7.0-local.jar SortVcf -I SRR1002940.rawSNPs.filtered.vcf -I SRR1002940.rawINDELs.filtered.vcf -O SRR1002940.Filtered.variant.vcf
+
+# picard Merge
+
+
+java -Xmx8g -jar /BiO/Install/picard-tools-2.22.3/picard.jar MergeVcfs I= SRR1002940.rawSNPs.filtered.vcf I= SRR1002940.rawINDELs.filtered.vcf O= SRR1002940.Filtered.variant.vcf
+
+

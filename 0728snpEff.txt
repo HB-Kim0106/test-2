@@ -1,0 +1,11 @@
+# snpEff
+
+java -jar /BiO/Acess/home/hykim/YUHS/DATA2/snpEff/snpEff.jar -v hg19 SRR2002940.Filtered.variant.PASS.vcf > SRR1002940.snpEff.vcf
+
+# snpSift -> rs number
+
+java -jar /BiO/Acess/hykim/YUHS/DATA2/snpEff/SnpSift.jar annotate /BiO/Education/WGS/REF/dbsnp_138.hg19.vcf SRR1002940.snpEff.vcf > SRR1002940.SnpEff.dbSNP138.vcf
+
+# snpSift -> rs number
+
+java -jar /BiO/Acess/hykim/YUHS/DATA2/snpEff/SnpSift.jar annotate /BiO/Education/WGS/REF/clinvar_20200706.vcf SRR1002940.snpEff.vcf > SRR1002940.SnpEff.dbSNP138.vcf

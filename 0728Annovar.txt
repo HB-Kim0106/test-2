@@ -1,0 +1,8 @@
+# Extraction of PASS 
+
+egrep "^#|PASS" SRR1002940.Filtered.variant.vcf > SRR1002940.Filtered.variant.PASS.vcf
+
+# comparing reference -> you could see an annotation of table
+
+perl /BiO/Install/annovar/table_annovar.pl SRR1002940.Filtered.variant.PASS.vcf /BiO/Education/WGS/humandb/ -buildver hg19 -out SRR1002940 -remove -protocol refGene,cytoBand,avsnp138,clinvar_20190305 -operation g,r,f,f -nastring . -vcfinput
+
